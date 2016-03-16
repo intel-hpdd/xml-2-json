@@ -1,0 +1,13 @@
+node_modules
+.idea
+.eslintignore
+.editorconfig
+.eslintrc
+.jscsrc
+.flowconfig
+.babelrc
+.gitignore
+/test
+/source
+/coverage
+/.nyc_output
