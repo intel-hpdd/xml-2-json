@@ -3,11 +3,12 @@ node_modules
 .eslintignore
 .editorconfig
 .eslintrc
-.jscsrc
 .flowconfig
 .babelrc
 .gitignore
+*.log
 /test
 /source
 /coverage
-/.nyc_output
+/bin
+run_test.sh

@@ -5,11 +5,11 @@ import libXml from 'libxmljs';
 
 const last = (xs) => xs.slice(-1).pop();
 
-export default (xml:string): Object => {
+export default (xml:string):Object => {
   if (xml.length === 0)
     return new Error('No content provided');
 
-  var error;
+  let error;
   const parser = new libXml.SaxParser();
   const json = {};
   const ptrStack = [json];

@@ -3,5 +3,5 @@ node_modules
 *.idea
 *.log
 dist
-coverage
 .nyc_output
+coverage

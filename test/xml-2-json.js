@@ -4,7 +4,8 @@ import xmlParser from '../source/xml-2-json.js';
 import {readFileSync} from 'fs';
 
 describe('xml to json', () => {
-  var xml, expectedJson;
+  let xml,
+    expectedJson;
 
   beforeAll(() => {
 

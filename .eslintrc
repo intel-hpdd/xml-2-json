@@ -1,11 +1,20 @@
 {
   "parser": "babel-eslint",
   "plugins": [
-    "flow-vars"
+    "flowtype",
+    "import"
   ],
   "rules": {
-    "flow-vars/define-flow-type": 1,
-    "flow-vars/use-flow-type": 1,
+    "flowtype/define-flow-type": 1,
+    "flowtype/use-flow-type": 1,
+    "flowtype/space-after-type-colon": [
+        1,
+        "never"
+    ],
+    "import/no-commonjs": 2,
+    "import/no-amd": 2,
+    "import/export": 2,
+    "no-var": 2,
     "quotes": [
       2,
       "single"
@@ -22,11 +31,17 @@
       2,
       2
     ],
-    "no-console": 0,
     "curly": [
       2,
       "multi",
       "consistent"
+    ],
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "all",
+        "ignoreReadBeforeAssign": false
+      }
     ]
   },
   "env": {
@@ -34,8 +49,9 @@
     "node": true
   },
   "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module"
+    "ecmaVersion": 2017,
+    "sourceType": "module",
+    "experimentalObjectRestSpread": true
   },
   "extends": "eslint:recommended"
 }
