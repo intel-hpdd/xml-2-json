@@ -3,8 +3,7 @@
 . ~/.nvm/nvm.sh
 
 NODE_VERSIONS="
-0.10
-4
+6
 stable
 "
 
@@ -14,6 +13,5 @@ do
     rm -rf node_modules
     npm i
     npm run cover -- --reporter=cobertura
-    mv ./coverage/cobertura-coverage.xml ../coverage
     mv xml-2-json-results*.xml ../results
 done
