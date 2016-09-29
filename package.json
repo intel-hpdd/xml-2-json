@@ -1,6 +1,6 @@
 {
   "name": "intel-xml-2-json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "parses simple xml to JSON output",
   "main": "dist/source/xml-2-json.js",
   "scripts": {
