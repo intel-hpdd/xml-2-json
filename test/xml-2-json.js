@@ -1,19 +1,19 @@
-import {describe, beforeAll, it, expect} from './jasmine.js';
-import {deepEqual} from 'assert';
+import { describe, beforeAll, it, expect } from './jasmine.js';
+import { deepEqual } from 'assert';
 import xmlParser from '../source/xml-2-json.js';
-import {readFileSync} from 'fs';
+import { readFileSync } from 'fs';
 
 describe('xml to json', () => {
-  let xml,
-    expectedJson;
+  let xml, expectedJson;
 
   beforeAll(() => {
-
     xml = readFileSync('./test/fixtures/fixture.xml', 'utf8')
-    .replace(/^\s+/gm, '')
-    .replace(/\n/gm, '');
+      .replace(/^\s+/gm, '')
+      .replace(/\n/gm, '');
 
-    expectedJson = JSON.parse(readFileSync('./test/fixtures/fixture.json', 'utf8'));
+    expectedJson = JSON.parse(
+      readFileSync('./test/fixtures/fixture.json', 'utf8')
+    );
   });
 
   it('should parse to JSON', () => {

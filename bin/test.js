@@ -12,7 +12,8 @@ if (process.env.RUNNER === 'CI') {
   var junitReporter = jasmineJUnitReporter({
     specTimer: new jasmine.jasmine.Timer(),
     JUnitReportSavePath: process.env.SAVE_PATH || './',
-    JUnitReportFilePrefix: process.env.FILE_PREFIX || 'xml-2-json-results-' +  process.version,
+    JUnitReportFilePrefix: process.env.FILE_PREFIX ||
+      'xml-2-json-results-' + process.version,
     JUnitReportSuiteName: 'XML 2 JSON Reports',
     JUnitReportPackageName: 'XML 2 JSON Reports'
   });
@@ -22,9 +23,7 @@ if (process.env.RUNNER === 'CI') {
 
 jasmine.loadConfig({
   spec_dir: 'dist/test',
-  spec_files: [
-    '**/*.js'
-  ],
+  spec_files: ['**/*.js'],
   random: true
 });
 
