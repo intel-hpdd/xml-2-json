@@ -16,10 +16,6 @@ export default (xml: string): Error | Object => {
       error = new Error(e.trim());
     });
 
-    cb.onStartDocument(() => {});
-
-    cb.onEndDocument(() => {});
-
     cb.onStartElementNS(elem => {
       if (error) return;
 
