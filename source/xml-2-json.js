@@ -1,46 +1,41 @@
 // @flow
 
+import libXml from 'node-xml';
 
-import libXml from 'libxmljs';
+const last = xs => xs.slice(-1).pop();
 
-const last = (xs) => xs.slice(-1).pop();
-
-export default (xml:string):Object => {
-  if (xml.length === 0)
-    return new Error('No content provided');
+export default (xml: string): Error | Object => {
+  if (xml.length === 0) return new Error('No content provided');
 
   let error;
-  const parser = new libXml.SaxParser();
   const json = {};
   const ptrStack = [json];
 
-  parser.on('error', e => {
-    error = new Error(e.trim());
-  });
+  const parser = new libXml.SaxParser(cb => {
+    cb.onError(e => {
+      error = new Error(e.trim());
+    });
 
-  parser.on('startElementNS', elem => {
-    if (error)
-      return;
+    cb.onStartElementNS(elem => {
+      if (error) return;
 
-    const json = {};
-    const curr = last(ptrStack);
+      const json = {};
+      const curr = last(ptrStack);
+      ptrStack.push(json);
+      curr[elem] = curr[elem] ? [].concat.call([], curr[elem], json) : json;
+    });
 
-    ptrStack.push(json);
-    curr[elem] = curr[elem] ? [].concat.call([], curr[elem], json) : json;
-  });
+    cb.onEndElementNS(() => {
+      if (error) return;
 
-  parser.on('endElementNS', () => {
-    if (error)
-      return;
+      ptrStack.pop(json);
+    });
 
-    ptrStack.pop(json);
-  });
+    cb.onCharacters(chars => {
+      if (error) return;
 
-  parser.on('characters', chars => {
-    if (error)
-      return;
-
-    last(ptrStack).text = chars.trim();
+      last(ptrStack).text = chars.trim();
+    });
   });
 
   parser.parseString(xml);
