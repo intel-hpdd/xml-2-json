@@ -1,5 +1,5 @@
 {
-  "name": "intel-xml-2-json",
+  "name": "@mfl/xml-2-json",
   "version": "1.0.1",
   "description": "parses simple xml to JSON output",
   "main": "dist/source/xml-2-json.js",
@@ -17,7 +17,7 @@
     "instrument": false
   },
   "publishConfig": {
-    "registry": "https://ubit-artifactory-or.intel.com/artifactory/api/npm/iml-npm-local"
+    "access": "public"
   },
   "pre-commit": [
     "flow",
@@ -26,9 +26,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.intel.com:IML/xml-parser.git"
+    "url": "git@github.intel.com:MFL/xml-parser.git"
   },
-  "author": "IML Team",
+  "author": "MFL Team",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.24.0",
@@ -44,8 +44,8 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-prettier": "^2.0.1",
     "flow-bin": "^0.42.0",
-    "intel-jasmine-junit-reporter": "1.0.0",
-    "intel-jasmine-n-matchers": "2.1.1",
+    "@mfl/jasmine-junit-reporter": "1.0.0",
+    "@mfl/jasmine-n-matchers": "2.1.1",
     "jasmine": "^2.5.3",
     "nyc": "^10.1.2",
     "pre-commit": "^1.2.2",
