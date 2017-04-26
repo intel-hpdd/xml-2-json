@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- 6
+- 7
+cache: yarn
+deploy:
+  provider: npm
+  email: joe.grund@intel.com
+  api_key:
+    secure: dWrbwP8l6s1y5LUBG5PfQUmglgRloOWPJRsUNP+SYUYBadbI5Snt24RlcavPI0ar0Jk34F9uIxaGV32SZeGhVCj0Ax4OrHX+FgUL7dPhzIZgg0lBPZiHOmV8qgQva0Mq9/s07xgKvQgNamSiuI6Dh61423lxPgvXMbE3mf8nVZE+1Tr9YvOIBGzb3HISoyzgN3a5bB2qpWsJv947eL8BbP4t4uHe1r8U52n++gcBZUpoN6Jjf42mnyFAxBveXjv/Eo38NhJb98wxNsPgu9LfWm4OoQaGWa7ELk54RXjgJOO199QtyGjsv2qyTaDe42xVN2rp515yUXVDT8fsfxJfLiH6URRc9R2OMYlPWbqfMb+Ml/FQSEJDd/pZZY3wmgJFcHcqEr0R4fRHarXA5r3BCJX/Kcs6Pq2QxvUnG6kzqgAh0nsbuzqLGx4b1+T7z32OMwWB4eKmqPoOOeixBRuZ5dqcCZvBXPa18H8KyWJTkxJET1UFsmqElLIDmCHdO37+kdefmQMC9QYkVB81cNyD4faRaY6Bk/BKfXM1bPLXe8JuPkCULQtjDEkLXiTApNBvnXCwDE2W63aveP3MXERoBJhtQh01SXEKnLxdi9iPaX09CraE+nyUNxZvrMfVH+5LydEoumo80caMVUSz5CLRgI7bk/G9ozTYAvzumIU0InY=
+  on:
+    tags: true
+    repo: intel-hpdd/xml-2-json
