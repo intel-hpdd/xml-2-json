@@ -28,7 +28,7 @@ export default (xml: string): Error | Object => {
     cb.onEndElementNS(() => {
       if (error) return;
 
-      ptrStack.pop(json);
+      ptrStack.pop();
     });
 
     cb.onCharacters(chars => {
