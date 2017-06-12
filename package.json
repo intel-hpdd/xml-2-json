@@ -27,16 +27,16 @@
     "@mfl/jasmine-n-matchers": "2.1.1",
     "babel-eslint": "^7.2.1",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
-    "babel-preset-env": "^1.1.9",
-    "eslint": "^3.18.0",
-    "eslint-config-prettier": "^1.5.0",
-    "eslint-plugin-flowtype": "^2.30.4",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-prettier": "^2.0.1",
-    "flow-bin": "0.44.2",
-    "jest": "^19.0.2",
+    "babel-preset-env": "^1.5.2",
+    "eslint": "^4.0.0",
+    "eslint-config-prettier": "^2.1.1",
+    "eslint-plugin-flowtype": "^2.34.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-prettier": "^2.1.1",
+    "flow-bin": "^0.47.0",
+    "jest": "^20.0.4",
     "pre-commit": "^1.2.2",
-    "prettier": "1.2.2"
+    "prettier": "^1.4.4"
   },
   "dependencies": {
     "node-xml": "^1.0.2"
