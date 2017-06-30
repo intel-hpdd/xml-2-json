@@ -1,5 +1,5 @@
 {
-  "name": "@mfl/xml-2-json",
+  "name": "@iml/xml-2-json",
   "version": "1.0.2",
   "description": "parses simple xml to JSON output",
   "main": "source/xml-2-json.js",
@@ -21,10 +21,10 @@
     "type": "git",
     "url": "https://github.com/intel-hpdd/xml-2-json.git"
   },
-  "author": "MFL Team",
+  "author": "IML Team",
   "license": "MIT",
   "devDependencies": {
-    "@mfl/jasmine-n-matchers": "2.1.1",
+    "@iml/jasmine-n-matchers": "2.1.1",
     "babel-eslint": "^7.2.1",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-env": "^1.5.2",
