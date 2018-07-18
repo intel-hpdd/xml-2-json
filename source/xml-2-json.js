@@ -1,5 +1,7 @@
 // @flow
 
+// Copyright (c) 2018 DDN
+
 import libXml from 'node-xml';
 
 const last = xs => xs.slice(-1).pop();
